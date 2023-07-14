@@ -11,3 +11,9 @@ label {
 input {
   border: 1px solid grey;
 }
+
+button {
+  border: 1px solid grey;
+  margin: 50px auto;
+  width: 7.5em;
+}

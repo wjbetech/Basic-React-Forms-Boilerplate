@@ -11,10 +11,15 @@ export class Form extends Component {
       dob: "",
       email: ""
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
     this.handleLastNameChange = this.handleLastNameChange.bind(this);
     this.handleDobChange = this.handleDobChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
+  }
+
+  handleSubmit() {
+    alert(`Congratulations on signing up! Here are your credentials:\n\nFirst Name: ${this.state.firstName}\nLast Name: ${this.state.lastName}\nD.O.B: ${this.state.dob}\nEmail: ${this.state.email}`)
   }
 
   handleFirstNameChange(event) {
@@ -89,6 +94,10 @@ export class Form extends Component {
               onChange={this.handleEmailChange}
             />
           </div>
+
+          <button
+            onClick={this.handleSubmit}
+          >Submit</button>
 
         </form>
 
