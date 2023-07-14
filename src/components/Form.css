@@ -1,0 +1,13 @@
+* {
+  margin: 5px 5px;
+  padding: 10px 10px;
+  border-radius: 50px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  border: 1px solid grey;
+}
