@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Form.css'
+import './SeparateHandlesForm.css'
 
 export class Form extends Component {
 
@@ -18,8 +18,15 @@ export class Form extends Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
   }
 
-  handleSubmit() {
+  handleSubmit(event) {
+    event.preventDefault();
     alert(`Congratulations on signing up! Here are your credentials:\n\nFirst Name: ${this.state.firstName}\nLast Name: ${this.state.lastName}\nD.O.B: ${this.state.dob}\nEmail: ${this.state.email}`)
+    this.setState(({
+      firstName: "",
+      lastName: "",
+      dob: "",
+      email: ""
+    }))
   }
 
   handleFirstNameChange(event) {
